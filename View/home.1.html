@@ -1,0 +1,324 @@
+<!DOCTYPE html>  
+<html lang="ja">
+  <head>
+	<meta charset="UTF-8">
+	<title>コンサート検索</title>
+	<link rel="stylesheet" href="../htdocs/css/stylesheet.1.css">
+	<script src="../htdocs/js/jquery-3.5.1.min.js"></script>
+	<script src="../htdocs/js/search.js"></script>
+  </head>
+	
+  <body>
+	<div id="wrapper">
+			 
+<!------ ヘッダー ------>
+	 <?php require_once("../View/header.html"); ?>
+	
+<!------ 階乗 ------>  
+	<p><input type="button" value="階乗計算" onClick="display()"></p>
+			
+<!------ セクション1 ------>            
+	<div id="section1">
+	  <h2>お知らせ</h2>
+	  <p>新型コロナウイルスの感染拡大防止のため、公演やイベントの延期・中止が相次いでおります。
+掲載している公演の最新情報は、それぞれの主催者のホームページなどでご確認ください。</p>
+	</div>
+
+<!------ main ------>
+<!------ フォーム ------>
+	<form method="get" action="/htdocs/search.php">
+	  <input type="text" name="search1">
+	  <input type="submit" value="検索">
+	</form>
+
+
+	<!--<form method="GET" action="/detail.php">-->
+	<!--  フリーワード：<input type="text" name="username" />-->
+	<!--  <input type="submit" value="検索"/>-->
+	<!--</form>-->
+			
+<!------セクション2------>
+	<div id="section2">
+	  <h3>地域別　一週間以内のコンサート</h3>
+	  <ul>
+		<?php foreach($result as $key => $value) { ?>
+		<li><?php h($value['areaName']); ?></li>
+		<?php } ?>
+	  </ul>
+	</div>
+			
+			 <!------コンテナー------>
+			<main class="container">
+				<p class="area-logo">エリアで絞り込む　※複数検索可能です。</p>
+				<form action="/detail.php">
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-1" name="Prefectural-1" onclick="clickFunction(1);">
+						<label for="area-1">北海道エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="hokkaido" class='area_checkbox' name="Prefectural-1">
+						<label for="hokkaido">北海道</label>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-2" value="東北エリア" name="Prefectural-2" onclick="clickFunction(2);">
+						<label for="area-2">東北エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="aomori" value="青森県" name="Prefectural-2">
+						<label for="aomori">青森県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="iwate" value="岩手県" name="Prefectural-2">
+						<label for="iwate">岩手県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="miyagi" value="宮城県" name="Prefectural-2">
+						<label for="miyagi">宮城県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="akita" value="秋田県" name="Prefectural-2">
+						<label for="akita">秋田県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="yamagata" value="山形県" name="Prefectural-2">
+						<label for="yamagata">山形県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="fukushima" value="福島県" name="Prefectural-2">
+						<label for="fukushima">福島県</label>
+					</li>
+				</ul>    
+				
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-3" name="Prefectural-3" onclick="clickFunction(3);">
+						<label for="area-3">関東エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="ibaraki" name="Prefectural-3">
+						<label for="ibaraki">茨城県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="tochigi" name="Prefectural-3">
+						<label for="tochigi">栃木県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="gunma" name="Prefectural-3">
+						<label for="gunma">群馬県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="saitama" name="Prefectural-3">
+						<label for="saitama">埼玉県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="chiba" name="Prefectural-3">
+						<label for="chiba">千葉県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="tokyo" name="Prefectural-3">
+						<label for="tokyo">東京都</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="kanagawa" name="Prefectural-3">
+						<label for="kanagawa">神奈川県</label>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-4" name="Prefectural-4" onclick="clickFunction(4);">
+						<label for="area-4">中部エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="niigata" name="Prefectural-4">
+						<label for="niigata">新潟県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="toyama" name="Prefectural-4">
+						<label for="toyama">富山県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="ishikawa" name="Prefectural-4">
+						<label for="ishikawa">石川県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="fukui" name="Prefectural-4">
+						<label for="fukui">福井県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="yamanashi" name="Prefectural-4">
+						<label for="yamanashi">山梨県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="nagano" name="Prefectural-4">
+						<label for="nagano">長野県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="gifu" name="Prefectural-4">
+						<label for="gifu">岐阜県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="shizuoka" name="Prefectural-4">
+						<label for="shizuoka">静岡県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="aichi" name="Prefectural-4">
+						<label for="aichi">愛知県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="mie" name="Prefectural-4">
+						<label for="mie">三重県</label>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-5" name="Prefectural-5" onclick="clickFunction(5);">
+						<label for="area-5">近畿エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="shiga" name="Prefectural-5">
+						<label for="shiga">滋賀県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="kyoto" name="Prefectural-5">
+						<label for="kyoto">京都府</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="osaka" name="Prefectural-5">
+						<label for="osaka">大阪府</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="hyogo" name="Prefectural-5">
+						<label for="hyogo">兵庫県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="nara" name="Prefectural-5">
+						<label for="nara">奈良県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="wakayama" name="Prefectural-5">
+						<label for="wakayama">和歌山県</label>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-6" name="Prefectural-6" onclick="clickFunction(6);">
+						<label for="area-6">中国エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="tottori" name="Prefectural-6">
+						<label for="tottori">鳥取県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="shimane" name="Prefectural-6">
+						<label for="shimane">島根県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="okayama" name="Prefectural-6">
+						<label for="okayama">岡山県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="hiroshima" name="Prefectural-6">
+						<label for="hiroshima">広島県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="yamaguchi" name="Prefectural-6">
+						<label for="yamaguchi">山口県</label>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-7" name="Prefectural-7" onclick="clickFunction(7);">
+						<label for="area-7">四国エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="tokushima" name="Prefectural-7">
+						<label for="tokushima">徳島県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="kagawa" name="Prefectural-7">
+						<label for="kagawa">香川県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="ehime" name="Prefectural-7">
+						<label for="ehime">愛媛県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="kochi" name="Prefectural-7">
+						<label for="kochi">高知県</label>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="flex-item1">
+						<input type="checkbox" id="area-8" name="Prefectural-8" onclick="clickFunction(8);">
+						<label for="area-8">九州・沖縄エリア</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="fukuoka" name="Prefectural-8">
+						<label for="fukuoka">福岡県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="saga" name="Prefectural-8">
+						<label for="saga">佐賀県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="nagasaki" name="Prefectural-8">
+						<label for="nagasaki">長崎県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="kumamoto" name="Prefectural-8">
+						<label for="kumamoto">熊本県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="oita" name="Prefectural-8">
+						<label for="oita">大分県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="miyazaki" name="Prefectural-8">
+						<label for="miyazaki">宮城県</label>
+					</li>
+					<li class="flex-item2">
+						<input type="checkbox" id="kagoshima" name="Prefectural-8">
+						<label for="kagoshima">鹿児島県</label>
+					</li>
+					<li class="flex-item2">
+						<!--<input type="checkbox" id="okinawa" name="Prefectural-8">-->
+						<label for="okinawa">沖縄県</label>
+					</li>
+				</ul>
+				
+				<div class="container-btn">
+					<input type="button" value="クリア" class="btnClear" onclick="clickClearFunction();">
+					<input type="button" value="すべて選択" class="btn" onclick="clickAllFunction();">
+
+					<input type="submit" value="検索" class="btn">
+				</div>
+				</form>
+				
+				<div class="">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				
+			</main>
+			
+<!------ フッダー ------>        
+			<div id="footer">
+				<p>Copyright (c) XXXXX All Rights Reserved.</p>
+			</div>    
+			
+		</div>
+	</body>
+</html> 

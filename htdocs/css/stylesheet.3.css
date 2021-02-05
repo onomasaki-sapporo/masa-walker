@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 13px;
+	line-height: 150%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.header {
+	background-color: #000;
+}
+
+.header .container {
+	height: 120;
+	display: flex;
+	/*align-items: center;*/
+}
+
+.area_logo_header {
+	display: flex;
+	align-items: center;
+	left: 20px;
+}
+
+.area_logo_header img {
+	position: relative;
+	left: 20px;
+}
+
+.title {
+	margin: 0 auto;
+}
+
+.tab-wrap {
+  width: 90%;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin:20px auto;
+}
+.tab-wrap:after {
+  content: '';
+  width: 1200px;
+  height: 3px;
+  background: #325A8C;
+  display: block;
+  order: -1;
+}
+.tab-label {
+  color: White;
+  background: LightGray;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+  tab-size: 5;
+  width: 90px;
+  padding: 10px 5px;
+  order: -1;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  /*flex: 1;*/
+}
+.tab-label:not(:last-of-type) {
+  margin-right: 5px;
+}
+.tab-content {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.tab-switch:checked+.tab-label {
+  background: #325A8C;
+}
+.tab-switch:checked+.tab-label+.tab-content {
+  height: auto;
+  overflow: auto;
+  padding: 15px;
+  opacity: 1;
+  transition: .5s opacity;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.tab-switch {
+  display: none;
+}
+
+
+
+.tab-content {
+  width: 1200px;
+  height: 300px;
+  border: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn a{
+    display:block;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background:#0099FF;
+    /*text-align:center;*/
+    color:#FFFFFF;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.btn a:hover{
+    background:#FF6118;
+    color:#FFFfff;
+    /*margin-left:0px;*/
+    /*margin-top:0px;*/
+    box-shadow:none;
+}
+
+#p1 {
+  width: 1100;
+  height: 40px;
+}
+/*テーブル*/
+table {
+  width: 1200px;
+  height: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: solid 1px black;
+  padding-left: 10px;
+}
+
+.caption_1 {
+  width: 500px;
+  height: 20px;
+}
+
+.caption_2 {
+  width: 200px;
+  height: 20px;
+}
+
+.caption_3 {
+  width: 200px;
+  height: 20px;
+}
+
+.caption_4 {
+  width: 100px;
+  height: 20px;
+}
+
+.caption_5 {
+  width: 100px;
+  height: 20px;
+}

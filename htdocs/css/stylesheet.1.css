@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 13px;
+	line-height: 150%;
+	/*background-color: #dcdcdc;*/
+}
+
+#wrapper {
+	width: 99%;
+	margin: auto;
+	padding: 0px;
+	border: 0px;
+	top: 10px;
+}
+
+/*----- ヘッダー -----*/
+.header {
+	/*color: #fff;*/
+	background-color: #00f;
+}
+
+/*.header > .container {*/
+/*	height: 60px;*/
+/*	display: flex;*/
+/*	align-items: center;*/
+/*}*/
+
+/*.area_logo_header {*/
+/*	display: block;*/
+/*}*/
+
+
+
+/*---- セクション1 ----*/
+.rotate_test {
+    width: 100px;
+    background-color:  #ccc;
+    padding: 10px 30px;
+    margin: 100px auto;
+    
+    /*transform:rotate(45deg);*/
+}
+
+
+
+.rotate_test input[type=checkbox] {
+	display: none;
+}
+
+#section1 {
+	width: 99%;
+	margin: auto;
+	height: 90px;
+	margin-top: 15px;
+	border: 3px solid red;
+	min-width: 1150px;
+}
+
+#section1 h2 {
+	margin: 5px 5px;
+	padding: 10px 0 5px 10px;
+}
+
+#section1 p {
+	text-align: center;
+}
+
+/*---- フォーム ----*/
+#form1 {
+	width: 99%;
+	margin: auto;
+	height: 140px;
+	min-width: 1150px;
+	margin-bottom: 15px;
+	display: flex;
+}
+
+#form1 p {
+	margin: 60px 0 10px 220px;
+}
+
+.sbox {
+	width: 30%;
+	height:30px;
+	margin: 50px 0 30px 20px;
+	border-radius:2px 0 0 2px;
+	/*background-color: #eee;*/
+}
+
+.sbtn {
+	width: 60px;
+	height: 35px;
+	margin: 50px 0 30px 10px;
+	border-radius: 0 2px 2px 0; 
+	background-color: #7fbfff;
+	border: none;
+	color: #fff;
+	font-weight: bold; 
+	font-size: 16px;
+}
+
+#form1 sbtn:hover {
+	color: #666; 
+}
+
+/*-------   main   -------*/
+
+/*----セクション2 ----*/
+#section2 {
+	width: 99%;
+	height: 140px;
+	margin: auto;
+	min-width: 1150px;
+	background-color: #fff;
+}
+
+#section2 h3 {
+	width: 99%;
+	height: 20px;
+	padding: 6px;
+	margin: 0;
+	text-align: center;
+	/*background-color: #008000;*/
+	color: #fff;
+}
+
+#section2 ul {
+	width: 350px;
+	height: 80px;
+	margin: 0 auto;
+	list-style: none;
+	color: #FF0066;
+	/*border: 1px solid #0000FF;*/
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+}
+
+
+/*---- コンテナー ----*/
+.container {
+	width: 99%;
+	min-width: 1150px;
+	height: 400px;
+	margin: auto;
+	background-color: #fff;
+}
+
+
+input[type="checkbox"]{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    /*border: 1px solid;*/
+    /*border-color:  #FFFFCC; */
+    /*background-color: #FFF;*/
+    
+    /*border-left: 2px solid #fff;*/
+    /*border-top: 2px solid #fff;*/
+  	transform: translateX(-50%);
+    
+   /* width: 1em;*/
+  	/*height: 0.1em;*/
+  	/*background: currentColor;*/
+  	/*border-radius: 0.1em;*/
+  	/*position: relative;*/
+    vertical-align: middle;
+  	/*color: #333;*/
+  	line-height: 1;
+    
+    
+}
+
+
+/* チェックが入った時のレ点 */
+input[type="checkbox"]:checked{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -9px;
+    top: 50%;
+    left: 3px;
+    /*transform: rotate(-45deg);*/
+    /*border-bottom: 3px solid;*/
+    /*border-left: 3px solid;*/
+    /*border-color:  #FFFFCC; */
+    /*border-top: 2px solid #fff;*/
+  	/*transform: translateX(-90%);*/
+}
+
+.area-logo {
+	margin-top: 50px;
+	margin-left: 40px;
+	padding: 10px;
+}
+	
+.container ul{
+	width: 93%;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	display: flex;
+	
+	flex-shrink: 0;
+	
+}
+
+.container ul li:nth-child(odd) {
+	background-color: #fff;
+}
+
+.container ul li:nth-child(even) {
+	/*background-color: #dcdcdc;*/
+	border: 1px solid #000080;
+}
+
+.container ul li {
+	list-style: none;
+	border-radius: 10px 10px;
+	/*border: 1px solid #FFFF00;*/
+	/*background-color: #FF00FF;*/
+	
+}
+
+.flex-item1 {
+	width: 150px;
+	margin: 0;
+	padding-left: 5px;
+	display: none;
+}
+
+.flex-item2 {
+	width: 90px;
+	margin: 0 5px;
+}
+
+.container-btn {
+	width: 150px;
+	padding: 5px 20px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.container-btn input {
+	width: 150px;
+}
+
+.btnClear {
+	color: red;
+}
+
+/*----- サンプル -----*/
+
+
+/*----- フッダー -----*/
+#footer {
+	height: 50px;
+	min-width: 1150px;
+	background-color: #808000;
+	color: #fff;
+}
+
+#footer p {
+	margin: 0;
+	text-align: center;
+	padding: 14px;
+	font-size: 2px;
+}

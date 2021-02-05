@@ -1,0 +1,66 @@
+    <ul class="slider" style="margin-bottom: 27px">
+      <?php foreach($main->img_path['top'] as $key => $img) { ?>
+        <li><img alt="" src=<?php h($img['img_path']); ?>></li>
+      <?php } ?>
+    </ul>
+    <div class="bg">
+      <div class="mc-1-1" style="color: white;background-color: #181818;">
+        <div class="mt-1">
+          <p><span>Live2D</span></p>
+        </div>
+        <div class="mc-2-t">
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding-top:10px;padding-bottom:10px;text-align: center;">
+              <p>長年の技術、知識を活かし、最高品質のモデル、モーションの制作をいたします。</p>
+              <p>小規模～大規模タイトルのアプリ用のLive2D、映像作品など全ての制作経験がございますので全て対応可能となっております。</p>
+            </li>
+          </ul>
+          <div style="height: 300px;text-align: center;">
+            <img id='live2d' class="mc-3-1" src=<?php h($main->img_path['live2d'][0]['img_path']); ?>>
+          </div>
+        </div>
+      </div>
+      <div class="mc-1-2" style="background-color: #181818;">
+        <div class="mt-1">
+          <p><span>Illustration</span></p>
+        </div>
+        <div class="mc-2-t">
+          <ul style="list-style: none; padding: 0;;">
+            <li style="padding-top: 10px;padding-bottom: 10px;text-align: center;">
+              <p>各種イラストの制作を受け付けております。</p>
+              <p>商業キャラクターデザインの経験もございますので、オリジナルキャラクターのデザインも可能となっております。</p>
+            </li>
+          </ul>
+          <div style="height: 300px;text-align: center;">
+            <img id='illust' class="mc-3-2" src=<?php h($main->img_path['illust'][0]['img_path']); ?>>
+          </div>
+        </div>
+      </div>
+      <div class="mc-1">
+        <div class="mt-1">
+          <p><span style="color: black;">PROFILE</span></p>
+        </div>
+        <div class="mc-2 flex">
+          <div class="mc-2-3">
+            <div class="mc-3-4 flex">
+              <img class="mc-3-3" src=<?php h($main->profile["img_path"]); ?>>
+              <div style="margin:auto;">
+                <p class="profile" style="color:black;"><?php echo($main->profile["profile"]); ?></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="new-1">
+        <div class="mt-1">
+          <p><span style="color: black;">INFOMATION</span></p>
+        </div>
+        <div class="news">
+        <?php foreach ($main->news as $info) { ?>
+          <p>[<?php h(date_format(date_create($info["update_date"]), 'Y-m-d')); ?>]</p>
+          <p><?php echo($info['contents']); ?></p>
+          <br>
+        <?php } ?> 
+        </div>
+      </div>
+    </div>

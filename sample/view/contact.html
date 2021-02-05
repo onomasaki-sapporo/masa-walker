@@ -1,0 +1,94 @@
+    <div class="bg">
+      <div class="fm-1">
+        <div class="mt-1">
+          <p><span>お問い合わせ</span></p>
+        </div>
+        <div class="mc-2 white">
+          <?php if (empty($main->success)) { ?>
+          <?php if (!empty($main->error)) { ?>
+          <div class="mt-4">
+          <?php   foreach($main->error as $message) { ?>
+          <p><?php h($message)?></p>
+          <?php   } ?>
+          </div>
+          <?php } ?>
+          <form method="post" action="/contact">
+            <div class="mt-2">
+              <div class="cb-1 flex">
+                <div id="cb_live2d" class="cb-2 flex">
+                  <div class="cb-3">
+                    <input id="live2d" type="checkbox" class="fm-ip" name="type" value="1">
+                  </div>
+                  <div class="cb-4">
+                    <div class="cb-font">Live2D</div>
+                  </div>
+                </div>
+                <div id="cb_illust" class="cb-2 flex">
+                  <div class="cb-3">
+                    <input id="illust" type="checkbox" class="fm-ip" name="type" value="2">
+                  </div>
+                  <div class="cb-4">
+                    <div class="cb-font">イラスト</div>
+                  </div>
+                </div>
+                <div id="cb_contact" class="cb-2 flex">
+                  <div class="cb-3">
+                    <input id="ct" type="checkbox" class="fm-ip" name="type" value="3">
+                  </div>
+                  <div class="cb-4">
+                    <div class="cb-font">お問い合わせ</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3 flex">
+                <div class="flex">
+                  <input type="radio" name="format" id="on" value="1" checked="">
+                  <label id = "format_on" for="on" class="switch-on">個人</label>
+                  <input type="radio" name="format" id="off" value="2">
+                  <label id="format_off" for="off" class="switch-off">法人</label>
+                </div>
+              </div>
+              <div class="ip-1">
+                <p class="name_1">お名前</p>
+                <p class="name_2" style="display:none;">貴社名</p>
+                <input type="text" name="name" placeholder="※必須" required>
+                <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="ip-1">
+                <p class="name_1">お名前(ふりがな)</p>
+                <p class="name_2" style="display:none;">貴社名(ふりがな)</p>
+                <input type="text" name="name_kana" placeholder="※必須" required>
+                <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="ip-1 name_2">
+                <p id='pic' class="name_2" style="display:none;">ご担当者名</p>
+                <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="ip-1 name_2">
+                <p id='pic_kana' class="name_2" style="display:none;">ご担当者名(ふりがな)</p>
+                <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="ip-1">
+                <p>E-Mail</p>
+                <input type="text" name="email" placeholder="※必須" required>
+                <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="ip-1">
+                <p>お問い合わせ内容</p>
+                <textarea class="textarea" name="contents" placeholder="※必須" required></textarea>
+                <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="mt-1">
+              <p><input class="send" type="submit" value="送信"></p>
+            </div>
+          </form>
+          <?php } else { ?>
+          <div class="mt-1">
+            <p>お問い合わせありがとうございます。</p>
+            <p>後日記入いただいたメールアドレスにご連絡させていただきます。</p>
+          </div>
+          <?php } ?>
+        </div>
+      </div>
+    </div>

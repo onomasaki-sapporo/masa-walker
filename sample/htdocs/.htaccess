@@ -1,0 +1,21 @@
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+  order allow,deny
+  deny from all
+  satisfy all
+</Files>
+
+<Files ~ "\.(dat|log|csv)$">
+  deny from all
+</Files>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} [^(/css/(.*))]$
+  RewriteCond %{REQUEST_URI} [^(/js/(.*))]$
+  RewriteCond %{REQUEST_URI} [^(/img/(.*))]$
+  RewriteCond %{REQUEST_URI} [^(\.php)]$
+  RewriteRule ^(.*)$ index.php?%{QUERY_STRING} [L]
+  ErrorDocument 404 /index.php
+</IfModule>
+
