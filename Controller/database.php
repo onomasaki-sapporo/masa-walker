@@ -37,7 +37,7 @@ class Database {
   }
   
     function getAreaAll() {
-    $sql = "SELECT areaID, areaName, prefectureid, prefectureName 
+    $sql = "SELECT areaName, prefectureName 
             FROM area 
             LEFT JOIN prefecture 
               ON area.areaID = prefecture.areaID;";

@@ -9,33 +9,37 @@
   </head>
     
   <body>
-    <!----ヘッダー>-->
-    <header class="header">
+    
+    <!--ヘッダー-->
+    <header　class="header">
       <div class="container">
-    <!------ ロゴエリア ------>
-        <div class="area_logo_header">
-          <a class="logo" href="">
-            <img src="../htdocs/images/logo3.jpg"></img>
-          </a>
+        
+        <div class="logo-header">
+          <img src="../htdocs/images/logo4.svg">
         </div>
+        
         <h1 class="title">コンサート情報</h1>
+        
+        <!--<details class="title">-->
+        <!--  <summary>見出しをクリック</summary>-->
+        <!--  内容がここに入ります。-->
+        <!--</details>-->
       </div>
     </header>
+    
     <!------ ナビゲーション ------>
     <maim>
       <div class="tab-wrap">
         <input id="tab01" type="radio" name="tab" class="tab-switch" checked="checked">
         <label class="tab-label" for="tab01">地域別検索</label>
+        
+        <div class="nav-tabContent">
           <div class="tab-content">
             <p class='btn'><a href=''>北海道エリア</a></p>
             <p class='btn' data-index='0'><a>北海道</a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
+          </div>
+          
+          <div class="tab-content">
             <p class='btn'><a href=''>東北エリア</a></p>
             <p class='btn'><a href=''>青森県</a></p>
             <p class='btn'><a href=''>岩手県</a></p>
@@ -43,8 +47,9 @@
             <p class='btn'><a href=''>秋田県</a></p>
             <p class='btn'><a href=''>山形県</a></p>
             <p class='btn'><a href=''>福島県</a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
+          </div>
+          
+          <div class="tab-content">
             <p class='btn'><a href=''>関東エリア</a></p>
             <p class='btn'><a href=''>茨城県</a></p>
             <p class='btn'><a href=''>栃木県</a></p>
@@ -53,9 +58,9 @@
             <p class='btn'><a href=''>千葉県</a></p>
             <p class='btn'><a href=''>東京都</a></p>
             <p class='btn' data-index='1'><a>神奈川県</a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
+          </div>
+          
+          <div class="tab-content">
             <p class='btn'><a href=''>中部エリア</a></p>
             <p class='btn'><a href=''>新潟県</a></p>
             <p class='btn'><a href=''>富山県</a></p>
@@ -67,6 +72,9 @@
             <p class='btn'><a href=''>静岡県</a></p>
             <p class='btn'><a href=''>愛知県</a></p>
             <p class='btn'><a href=''>三重県</a></p>
+          </div>
+          
+          <div class="tab-content">
             <p class='btn'><a href=''>近畿エリア</a></p>
             <p class='btn'><a href=''>滋賀県</a></p>
             <p class='btn'><a href=''>京都府</a></p>
@@ -74,32 +82,26 @@
             <p class='btn'><a href=''>兵庫県</a></p>
             <p class='btn'><a href=''>奈良県</a></p>
             <p class='btn'><a href=''>和歌山県</a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
+          </div>
+          
+          <div class="tab-content">
             <p class='btn'><a href=''>中国エリア</a></p>
             <p class='btn'><a href=''>鳥取県</a></p>
             <p class='btn'><a href=''>島根県</a></p>
             <p class='btn'><a href=''>岡山県</a></p>
             <p class='btn'><a href=''>広島県</a></p>
             <p class='btn'><a href=''>山口県</a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
+          </div>
+          
+          <div class="tab-content">
             <p class='btn'><a href=''>四国エリア</a></p>
             <p class='btn'><a href=''>徳島県</a></p>
             <p class='btn'><a href=''>香川県</a></p>
             <p class='btn'><a href=''>愛媛県</a></p>
             <p class='btn'><a href=''>高知県</a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
-            <p class='btn'><a href=''></a></p>
+          </div>
+          
+          <div class="tab-content">
             <p class='btn'><a href=''>九州・沖縄エリア</a></p>
             <p class='btn'><a href=''>福岡県</a></p>
             <p class='btn'><a href=''>佐賀県</a></p>
@@ -109,15 +111,8 @@
             <p class='btn'><a href=''>宮城県</a></p>
             <p class='btn'><a href=''>鹿児島県</a></p>
             <p class='btn'><a href=''>沖縄県</a></p>
-            
-            
-            
-            
-            
-            
-            
-            
           </div>
+        </div>  
         <!--<div class="tab-content">-->
         <!--  <div class="disp-box">-->
         <!--    <input type="button" value="ボタン1" onclick="clickBtn1()" />-->
@@ -132,7 +127,6 @@
           
       </div>
       
-    <p id="p1">テスト１</p>
 
     </maim>
       <!--<?php //require_once("../View/header.html"); ?>-->
